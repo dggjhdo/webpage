@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style> 
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: large; 
+      letter-spacing: .5mm;
+      box-sizing: border-box;
+      word-spacing: 1mm;
+    }
+
+    header { 
+      display: flex;
+      align-items: center;
+      color: white;
+      padding: 15px; 
+      background-color: black;
+    }
+
+    header p {
+      margin-left: 30px;
+      font-weight: 700;
+    }
+
+    nav {
+      margin-left: auto;
+      margin-right: 10px;
+    }
+
+    nav a { 
+      color: white; 
+      margin: 5px;
+    }
+
+    nav a:hover {
+      color: palevioletred;
+      text-shadow: 1px 1px 1px black; 
+    }
+
+    main {
+      width: 100%;
+    } 
+
+    .object-reverse {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      height: 390px; 
+      position: relative;
+      margin: 10px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .object-reverse:hover {
+      transform: scale(1.03);
+      box-shadow: 0px 10px 50px black;
+    }
+
+    .object-reverse img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+      display: block;
+    }
+
+    .text {
+      background-color: white;
+      color: black;
+      display: flex;
+      align-items: center; 
+      padding: 20px;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .text p {
+      font-size: 2em;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px lightblue;
+      padding: 10px;
+    }
+
+    .text dl {
+      font-size: larger;
+      font-weight: bold;
+      padding: 10px
+    } 
+
+    /* Alternate section layouts */
+    .left-text {
+      grid-template-areas: "text image";
+    }
+
+    .left-text .text {
+      grid-area: text; 
+    }
+
+    .left-text img {
+      grid-area: image;
+    }
+
+    .right-text {
+      grid-template-areas: "image text";
+    }
+
+    .right-text img {
+      grid-area: image;
+    }
+
+    .right-text .text {
+      grid-area: text; 
+    }
+
+    footer {
+      background-color: palevioletred;
+      text-align: center;
+      width: 100%;
+      padding: 10px 0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p>ANIME BLOG</p>
+    <nav> 
+      <a href="#">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SERVICES</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </header>
+
+  <main> 
+    <!-- <aside>
+      <img src="3.jpg" alt="">
+    </aside>  -->
+
+    <section class="object-reverse right-text">
+      <img src="/images/3.jpg" alt="">
+      <div class="text">
+        <p>SOLO LEVELING</p>
+        <dl>About</dl>
+        <dd>Solo Leveling, also alternatively translated as Only I Level Up is a South Korean fantasy web novel written by Chugong. It was serialized in Kakao's digital comic and fiction platform KakaoPage beginning on July 25, 2016, and was later published by D&C Media under their Papyrus label since November 4, 2016.</dd>
+      </div>
+    </section>
+
+    <section class="object-reverse left-text">
+      <div class="text">
+        <p>BLEACH</p>
+        <dl>About</dl>
+        <dd>Ichigo Kurosaki never asked for the ability to see ghosts -- he was born with the gift. When his family is attacked by a Hollow -- a malevolent lost soul -- Ichigo becomes a Soul Reaper, dedicating his life to protecting the innocent and helping the tortured spirits themselves find peace.</dd>
+      </div>
+      <img src="/images/7.jpg" alt="">
+    </section>
+
+    <section class="object-reverse right-text">
+      <img src="/images/5.jpg" alt="">
+      <div class="text">
+        <p>ONE PIECE</p>
+        <dl>About</dl>
+         <dd>One Piece is a Japanese manga series written and illustrated by Eiichiro Oda. It follows the adventures of Monkey D. Luffy and his crew, the Straw Hat Pirates, as he explores the Grand Line in search of the mythical treasure known as the "One Piece" to become the next King of the Pirates.</dd>
+      </div>
+    </section>
+
+    
+
+    <section class="object-reverse left-text">
+      <div class="text">
+        <p>NARUTO</p>
+        <dl>About</dl>
+         <dd>Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto. It tells the story of Naruto Uzumaki, a young ninja who seeks recognition from his peers and dreams of becoming the Hokage, the leader of his village.</dd>
+      </div>
+      <img src="/images/11.jpg" alt="">
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Guruprasad. 
+  </footer> 
+</body>
+</html>
